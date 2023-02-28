@@ -2,9 +2,9 @@ import forest from "../../assets/trees.png"
 
 
 
-const user = process.env.EMAIL
-const pass = process.env.PASSWORD
-const api = process.env.API_KEY
+const user = process.env.REACT_APP_EMAIL
+const pass = process.env.REACT_APP_PASSWORD
+const api = process.env.REACT_APP_API_KEY
 export default function Login() {
     const api = "https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyCOZiKCWqYYjx2ZZ02Y9UZmMPbfcbo6h3Q"
 
@@ -16,7 +16,7 @@ export default function Login() {
         const requestOptions = {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ email:"user", password: "pass" , returnSecureToken: true })
+            body: JSON.stringify({ email:{user}, password: {pass} , returnSecureToken: true })
         };
         fetch(api, requestOptions)
             .then(response => response.json())
