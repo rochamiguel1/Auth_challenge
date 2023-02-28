@@ -16,7 +16,7 @@ export default function Login() {
         const requestOptions = {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ email: { user }, password: { pass }, returnSecureToken: true })
+            body: JSON.stringify({ email:"user", password: "pass" , returnSecureToken: true })
         };
         fetch(api, requestOptions)
             .then(response => response.json())
@@ -33,7 +33,6 @@ export default function Login() {
                 <div className="flex  items-center absolute  w-[132px] h-[132px] border-4 rounded-full border-[#0D9488] bg-white"></div>
          </div>
  
-
             <h1 className="flex items-center justify-center font-extrabold leading-9 text-3xl pt-20 ">Iniciar sesión</h1>
  
             <div className="flex flex-col m-4 p-4 max-h-72 max-w-md border gap-6">
