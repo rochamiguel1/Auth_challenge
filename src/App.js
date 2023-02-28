@@ -12,7 +12,7 @@ return (
   <div className="App">
 
     < Login />
-    < MKT_Home />
+    
 
   </div>
 );
